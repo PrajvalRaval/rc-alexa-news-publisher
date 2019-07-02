@@ -146,11 +146,6 @@ app.get('/', async (req, res) => {
 
 });
 
-app.get('/download', (req, res) => {
-  const file = __dirname + '/audioFolder/audioFile.mp3';
-  res.download(file);
-});
-
 app.listen(PORT, '0.0.0.0', function () {
   console.log(`Server Now Listening on Port ${PORT}`);
 });
