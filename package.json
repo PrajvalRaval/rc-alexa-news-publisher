@@ -1,18 +1,19 @@
 {
-	"name": "hero",
+	"name": "RCEDITORIALFB",
 	"version": "1.0.0",
-	"description": "",
+	"description": "ROCKET CHAT FLASH BRIEFINGS",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "",
+	"author": "Prajval Raval",
 	"license": "ISC",
 	"dependencies": {
-		"express": "^4.16.4",
 		"axios": "^0.19.0",
-		"dotenv":"^8.0.0"
+		"dotenv": "^8.0.0",
+		"express": "^4.16.4",
+		"memory-cache": "^0.2.0"
 	},
 	"engines": {
 		"node": "v11.3.0"
