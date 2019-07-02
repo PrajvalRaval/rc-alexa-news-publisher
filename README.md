@@ -1,4 +1,4 @@
-# Rocket Chat Flash Briefing
+# Alexa News Pulisher
 Flash Briefing Skill - Powered By Rocket.Chat
 
 ***
