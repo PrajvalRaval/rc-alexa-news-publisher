@@ -21,7 +21,7 @@ Deploy your Flash briefing skill in minutes using Rocket chat and broadcast mess
 
 **Note:** Requires Admin Access.
 
-### Creating Broadcast Channel
+### Creating A Main Broadcast Channel
 
 * On Server Homepage click on **Create New** -> **Channel**
 
@@ -29,12 +29,14 @@ Deploy your Flash briefing skill in minutes using Rocket chat and broadcast mess
 
 * Then give your **Channel Name**, and click on **Create**.
 
+* This channel will work as the main channel that tells your flashbriefing from where to gather messages. Make sure you the channelnames in this channel are declared in following way:
+
+![editor-channel](https://user-images.githubusercontent.com/41849970/60520926-e1301c00-9d03-11e9-8a88-881be2f4defd.png)
+
 ### Deploying Code
 
-* Get Repository Contents using the following command:
-   
-   `git clone https://github.com/PrajvalRaval/rc-flashbriefing-server.git`
-   
+* Clone the repository contents to your server.
+
 * After cloning create a **.env** file with following environment variables:
 
   * **PORT** : Enter The Port number you want server to run on.
@@ -42,12 +44,6 @@ Deploy your Flash briefing skill in minutes using Rocket chat and broadcast mess
   * **CHANNEL_NAME** : Enter the name of the broadcasting channel we created earlier. Make sure its in lower case with no spaces.
 
   * **SERVER_URL** : Enter your current Rocket.Chat server url here. Ex- https://your.sever.chat
-  
-  * **FBSERVER_URL** : Enter your the Hostname where this node app will be deployed. Ex- If your server is going to be deployed on `https://your.sever.chat` use only `your.sever.chat`.
-  
-  * **USER_NAME** : Enter your Rocket.Chat username.
-  
-  * **PASSWORD** : Enter your Rocket.chat password.
 
 * Change **cacheTimeout** & **flashBriefingTitle** from **index.js** as per your requirement.
 
@@ -79,9 +75,9 @@ Deploy your Flash briefing skill in minutes using Rocket chat and broadcast mess
 
 ## Usage
 
-* Flash briefing will use the **last message** on the broadcast channel for broadcasting.
+* Flash briefing will use the **channel names in last message** from the main broadcast channel for broadcasting. It will then gather all the messages from the mentioned channels and present it to the user in the skill.
 
-* Make sure that the last message is either a **text message** or **audio message** and not other file types such as *images or videos*.
+* Make sure that the last message is a **text message**.
 
 # TODOs
 
